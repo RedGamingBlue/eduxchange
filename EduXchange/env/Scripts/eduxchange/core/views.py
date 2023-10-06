@@ -1,12 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 
+# Create your views here.
+def index(request):
+    return render(request, 'core/index.html')
 
-from .models import Item
-
-
-
-def detail (requesr, pk):
-    item = get_object_or_404(Item, pk=pk)
-    return render(request, 'item/detail.html', {
-        'item': item
-    })
+def contact(request):
+    return render(request, 'core/contact.html')
